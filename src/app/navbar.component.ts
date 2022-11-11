@@ -18,13 +18,14 @@ import { Component, OnInit } from '@angular/core';
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">Angular Users</a>
+          <a class="navbar-brand" href="" [routerLink]="['/home']"
+                routerLinkActive="active">Angular Users</a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
                 class="nav-link active"
                 aria-current="page"
-                [routerLink]="['/']"
+                [routerLink]="['/home']"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
                 ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">home</mat-icon></a

@@ -4,18 +4,22 @@ import { AuthService } from './auth.service';
 
 @Component({
   template: `
-    <form #f="ngForm" (ngSubmit)="onSubmit()">
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" ngModel name="email" class="form-control" id="email">
+  <div class="card " style="width: 20rem;">
+    <div class="card-body">
+      <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" ngModel name="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" ngModel name="password" class="form-control" id="password">
+          <button type="submit" class="btn btn-primary ms-5 mt-2">Submit</button>
+        </div>
+      </form>
+      <h3 *ngIf="error">{{ error }}</h3>
+      </div>
   </div>
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" ngModel name="password" class="form-control" id="password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<h3 *ngIf="error">{{ error }}</h3>
   `,
   styles: [
   ]

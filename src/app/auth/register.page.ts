@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 
 @Component({
   template: `
+  <div class="card " style="width: 20rem;">
+    <div class="card-body">
     <form #f="ngForm" (ngSubmit)="onSubmit()">
   <div class="mb-3">
     <label for="firstname" class="form-label">Firstname</label>
@@ -25,6 +27,8 @@ import { Router } from '@angular/router';
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <h3 *ngIf="error">{{ error }}</h3>
+</div>
+  </div>
 
   `,
   styles: [
