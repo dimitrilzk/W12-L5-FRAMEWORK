@@ -6,12 +6,15 @@ import { UsersService } from '../users.service';
 @Component({
   template: `
     <ng-container *ngIf="user; else elseTemplate">
-      <h3>{{user.firstname}} {{user.lastname}}</h3>
-      <p>email: {{user.email}}</p>
-      <p>ruolo: {{user.role}}</p>
+    <div class="alert alert-primary  " role="alert">
+  <h1 class="d-flex justify-content-center mb-0">{{user.firstname}} {{user.lastname}}</h1>
+  <p class="d-flex justify-content-center mb-0">email: {{user.email}}</p>
+  </div>
     </ng-container>
     <ng-template #elseTemplate>
-      <p>utente non trovato</p>
+    <div class="alert alert-danger" role="alert">
+    <p>utente non trovato</p>
+    </div>
     </ng-template>
 
   `,

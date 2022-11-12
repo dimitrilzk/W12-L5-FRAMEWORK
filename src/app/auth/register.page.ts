@@ -5,15 +5,19 @@ import { Router } from '@angular/router';
 
 @Component({
   template: `
-  <div class="card " style="width: 20rem;">
-    <div class="card-body">
-    <form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div class="alert alert-primary" role="alert">
+  <h1 class="d-flex justify-content-center mb-0">Benvenuto, compila i campi qui sotto per registrati.</h1>
+  </div>
+  <div class="d-flex justify-content-center mt-5 ">
+  <div class="card " style="width: 25rem;">
+    <div class="card-body ">
+    <form #f="ngForm" (ngSubmit)="onSubmit()" class="p-3">
   <div class="mb-3">
-    <label for="firstname" class="form-label">Firstname</label>
+    <label for="firstname" class="form-label">Nome</label>
     <input type="text" ngModel name="firstname" class="form-control" id="firstname" >
   </div>
   <div class="mb-3">
-    <label for="lastname" class="form-label">Lastname</label>
+    <label for="lastname" class="form-label">Cognome</label>
     <input type="text" ngModel name="lastname" class="form-control" id="lastname">
   </div>
   <div class="mb-3">
@@ -24,10 +28,11 @@ import { Router } from '@angular/router';
     <label for="password" class="form-label">Password</label>
     <input type="password" ngModel name="password" class="form-control" id="password">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary ">Submit</button>
 </form>
 <h3 *ngIf="error">{{ error }}</h3>
 </div>
+  </div>
   </div>
 
   `,

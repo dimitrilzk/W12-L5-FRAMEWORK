@@ -4,18 +4,29 @@ import { UsersService } from '../users.service';
 
 @Component({
   template: `
-    <div class="container mt-4">
-      <ul class="list-group">
-        <li [routerLink]="[user.id]" routerLinkActive="active"
-            class="list-group-item" *ngFor="let user of users">
-          {{ user.firstname }} {{ user.lastname }}
-        </li>
-      </ul>
+  <table class="table table-success table-striped my-2">
+  <thead  >
+    <tr >
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [routerLink]="[user.id]" routerLinkActive="active"
+        *ngFor="let user of users" >
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+    </tr>
+  </tbody>
+</table>
       <hr />
       <router-outlet></router-outlet>
-    </div>
   `,
-  styles: [],
+  styles: [`
+  table {
+    cursor: pointer;
+  }
+  `],
 })
 export class UsersPage implements OnInit {
   users!: User[];

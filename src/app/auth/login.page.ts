@@ -4,9 +4,13 @@ import { AuthService } from './auth.service';
 
 @Component({
   template: `
-  <div class="card " style="width: 20rem;">
-    <div class="card-body">
-      <form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div class="alert alert-primary" role="alert">
+  <h1 class="d-flex justify-content-center mb-0">Bentornato, effettua il login per navigare l'app.</h1>
+  </div>
+  <div class="d-flex justify-content-center mt-5">
+  <div class="card  " style="width: 25rem;">
+    <div class="card-body ">
+      <form #f="ngForm" (ngSubmit)="onSubmit()" class="p-3">
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input type="email" ngModel name="email" class="form-control" id="email">
@@ -14,11 +18,12 @@ import { AuthService } from './auth.service';
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" ngModel name="password" class="form-control" id="password">
-          <button type="submit" class="btn btn-primary ms-5 mt-2">Submit</button>
+          <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </div>
       </form>
       <h3 *ngIf="error">{{ error }}</h3>
       </div>
+  </div>
   </div>
   `,
   styles: [
