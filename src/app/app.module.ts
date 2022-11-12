@@ -23,6 +23,7 @@ import { AuthModule } from './auth/auth.module';
 import { LoginPage } from './auth/login.page';
 import { RegisterPage } from './auth/register.page';
 
+
 const routes:Route[] = [
   {
     path:"",
@@ -91,7 +92,8 @@ const routes:Route[] = [
     AuthModule,
     HttpClientModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

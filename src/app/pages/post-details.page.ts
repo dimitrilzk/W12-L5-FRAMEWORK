@@ -7,7 +7,20 @@ import { PostsService } from '../posts.service';
 @Component({
   template: `
     <div class="container ">
-      <ng-container *ngIf="post; else elseTemplate">
+    <ng-container *ngIf="post; else elseTemplate">
+    <ul class="list-group">
+      <li class="list-group-item active text-center mt-4 mb-3" aria-current="true">{{ post.title }}</li>
+      <li class="list-group-item">{{post.body}}</li>
+      <li class="list-group-item">Categoria: {{post.type}}</li>
+      <li class="list-group-item">Autore: {{post.author}}</li>
+    </ul>
+    </ng-container>
+    </div>
+    <ng-template #elseTemplate>
+      <h1 class="text-center mt-5">post non trovato</h1>
+    </ng-template>
+
+      <!-- <ng-container *ngIf="post; else elseTemplate">
         <h1 class="text-center mt-4 mb-3">
           {{ post.title }}
         </h1>
@@ -18,7 +31,7 @@ import { PostsService } from '../posts.service';
     </div>
     <ng-template #elseTemplate>
       <h1 class="text-center mt-5">post non trovato</h1>
-    </ng-template>
+    </ng-template> -->
   `,
   styles: [],
 })

@@ -4,7 +4,7 @@ import { PostsService } from '../posts.service';
 
 @Component({
   template: `
-    <div class="container mt-5">
+    <div class="container mt-5 d-flex justify-content-around gap-1">
       <div *ngFor="let post of posts; let i = index">
         <app-post-card [post]="post" *ngIf="!post.active">
           <button (click)="onActivePost(post.id, i)" class="btn btn-primary">
