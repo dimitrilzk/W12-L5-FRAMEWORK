@@ -96,6 +96,6 @@ const routes:Route[] = [
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, HomePage]
 })
 export class AppModule { }

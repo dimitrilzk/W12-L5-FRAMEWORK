@@ -34,6 +34,13 @@
       "firstname": "Ilenia",
       "lastname": "Zago",
       "id": 5
+    },
+    {
+      "email": "user@rexals.com",
+      "password": "$2a$10$EQpo/LDxEE8HH9da.jEENOokvltOj3bD57hs1nvI6PzccNyXxo9g6",
+      "firstname": "giordano ",
+      "lastname": "terzo",
+      "id": 6
     }
   ],
   "posts": [
@@ -49,7 +56,7 @@
       "id": 2,
       "body": "Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et velit quis anim officia fugiat esse laborum nisi fugiat non.",
       "title": "Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.",
-      "active": false,
+      "active": true,
       "type": "education",
       "author": "Lusa"
     },
